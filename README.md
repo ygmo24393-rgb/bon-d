@@ -1,20 +1,10 @@
-# Portfolio
+# BON-D
 
-646일 동안의 디자인 기록을 담은 포트폴리오 사이트.
+BON-D 프로젝트 상세 페이지 (포트폴리오 본편은 `646d-portfolio` 저장소).
 
-## 구성
-- `index.html` — 메인 (메인 화면 · WHO AM I · 646 DAYS · WORKS · 상세페이지 오버레이)
-- `ambit.svg` — AMBIT (EN) 상세
-- `bond.svg`, `bond-logo.mp4`, `bond-logo-poster.jpg` — BON-D 상세
-- `pyeojin.svg` — PYEOJIN GOTHIC (KR) 상세
-- `odd.mp4`, `odd-poster.jpg` — 메인 아래 ODD 영상 (보이면 자동재생)
-- `onboarding.html` — 온보딩 백업 (단독 재생)
+- `bond.html` — BON-D 상세 (`index.html`은 여기로 이동)
+- `odd.mp4`, `odd-poster.jpg` — 메인 바로 아래 영상 (화면에 보이면 자동재생)
+- `bond-flow.html` — 온보딩 플로우
+- `bond-*` — 이미지·영상 에셋
 
-## 실행
-정적 파일이라 빌드가 필요 없습니다. 상세 SVG를 불러오기 때문에 파일을 직접 열기보다 로컬 서버로 확인하세요.
-
-```
-python3 -m http.server 8000
-```
-
-GitHub Pages: Settings → Pages → Branch `main` / root 로 배포하면 됩니다.
+GitHub Pages: Settings → Pages → Branch `main` / root
