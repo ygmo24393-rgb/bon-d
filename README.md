@@ -7,6 +7,7 @@
 - `ambit.svg` — AMBIT (EN) 상세
 - `bond.svg`, `bond-logo.mp4`, `bond-logo-poster.jpg` — BON-D 상세
 - `pyeojin.svg` — PYEOJIN GOTHIC (KR) 상세
+- `odd.mp4`, `odd-poster.jpg` — 메인 아래 ODD 영상 (보이면 자동재생)
 - `onboarding.html` — 온보딩 백업 (단독 재생)
 
 ## 실행

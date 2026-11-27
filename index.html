@@ -208,6 +208,30 @@
 
 </div>
 
+<!-- ═════════════ ODD 영상 (메인 바로 아래, 화면에 보이면 자동재생) ═════════════ -->
+<section class="oddvid" aria-label="ODD 영상">
+  <video id="oddVideo" src="odd.mp4" poster="odd-poster.jpg" muted loop playsinline preload="metadata"></video>
+  <button id="oddSound" type="button" aria-label="소리 켜기">SOUND OFF</button>
+</section>
+<style>
+  .oddvid{position:relative;width:100%;aspect-ratio:1920/1080;background:#080808;margin-top:-2px}
+  .oddvid video{display:block;width:100%;height:100%;object-fit:cover}
+  #oddSound{position:absolute;right:2.2vw;bottom:2.2vw;padding:.6em 1.1em;border:1px solid rgba(255,255,255,.6);border-radius:999px;background:rgba(8,8,8,.45);color:#fff;font:600 clamp(10px,.75vw,14px)/1 sans-serif;letter-spacing:.08em;cursor:pointer}
+</style>
+<script>
+(() => {
+  const v = document.getElementById('oddVideo'), b = document.getElementById('oddSound');
+  new IntersectionObserver(es => es.forEach(e => {
+    if (e.isIntersecting) { const p = v.play(); if (p) p.catch(() => {}); } else v.pause();
+  }), { threshold: 0.4 }).observe(v);
+  b.addEventListener('click', () => {
+    v.muted = !v.muted; b.textContent = v.muted ? 'SOUND OFF' : 'SOUND ON';
+    b.setAttribute('aria-label', v.muted ? '소리 켜기' : '소리 끄기');
+    if (!v.muted) v.play().catch(() => {});
+  });
+})();
+</script>
+
 <!-- 메인 아래 여백 (1920 기준 60px) -->
 <div class="gap20"></div>
 <!-- ═════════════ WHO AM I ═════════════ -->
